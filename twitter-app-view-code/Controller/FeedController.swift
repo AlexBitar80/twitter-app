@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FeedController.swift
 //  twitter-app-view-code
 //
 //  Created by João Alexandre on 22/05/22.
@@ -7,10 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FeedController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+
+        view.backgroundColor = .brown
     }
 }
