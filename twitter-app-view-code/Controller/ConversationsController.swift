@@ -11,7 +11,12 @@ class ConversationsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .orange
+        
+        configureUI()
+    }
+    
+    func configureUI() {
+        navigationItem.title = "Conversations"
+        view.backgroundColor = .white
     }
 }
