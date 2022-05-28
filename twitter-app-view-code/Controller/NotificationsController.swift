@@ -16,7 +16,13 @@ class NotificationsController: UIViewController {
     }
     
     func configureUI() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
         navigationItem.title = "Notifications"
+        
         view.backgroundColor = .white
     }
 }
