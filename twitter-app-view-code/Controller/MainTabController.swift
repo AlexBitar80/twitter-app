@@ -17,6 +17,7 @@ class MainTabController: UITabBarController {
         button.setImage(UIImage(systemName: "plus"), for: .normal)
         button.tintColor = .white
         button.layer.cornerRadius = 56 / 2
+        button.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -33,6 +34,12 @@ class MainTabController: UITabBarController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    //MARK: - Selectors
+    
+    @objc func actionButtonTapped() {
+        print(1234)
     }
     
     //MARK: - Helpers
@@ -58,15 +65,27 @@ class MainTabController: UITabBarController {
         let notifications = NotificationsController()
         let conversations = ConversationsController()
         
-        let feedNav = ambedInNavigationController(vc: feed, image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
-        let exploreNav = ambedInNavigationController(vc: explore, image: UIImage(systemName: "magnifyingglass.circle"), selectedImage: UIImage(systemName: "magnifyingglass.circle.fill"))
-        let notificationsNav = ambedInNavigationController(vc: notifications, image: UIImage(systemName: "bell"), selectedImage: UIImage(systemName: "bell.fill"))
-        let conversationsNav = ambedInNavigationController(vc: conversations, image: UIImage(systemName: "envelope"), selectedImage: UIImage(systemName: "envelope.fill"))
+        let feedNav = ambedInNavigationController(vc: feed,
+                                                   image: UIImage(systemName: "house"),
+                                                   selectedImage: UIImage(systemName: "house.fill"))
+        
+        let exploreNav = ambedInNavigationController(vc: explore,
+                                                      image: UIImage(systemName: "magnifyingglass.circle"),
+                                                      selectedImage: UIImage(systemName: "magnifyingglass.circle.fill"))
+        
+        let notificationsNav = ambedInNavigationController(vc: notifications,
+                                                            image: UIImage(systemName: "bell"),
+                                                            selectedImage: UIImage(systemName: "bell.fill"))
+        
+        let conversationsNav = ambedInNavigationController(vc: conversations,
+                                                            image: UIImage(systemName: "envelope"),
+                                                            selectedImage: UIImage(systemName: "envelope.fill"))
 
         viewControllers = [feedNav, exploreNav, notificationsNav, conversationsNav]
     }
     
-    private func ambedInNavigationController(vc: UIViewController, image: UIImage?, selectedImage: UIImage?) -> UINavigationController {
+    private func ambedInNavigationController(vc: UIViewController, image: UIImage?,
+                                              selectedImage: UIImage?) -> UINavigationController {
         let nav = UINavigationController(rootViewController: vc)
         nav.tabBarItem.image = image
         nav.tabBarItem.selectedImage = selectedImage
