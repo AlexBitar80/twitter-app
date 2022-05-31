@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icons8-twitter 1@1x.png",
+      "filename" : "Vector@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icons8-twitter 1@2x.png",
+      "filename" : "Vector@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "icons8-twitter 1@3x.png",
+      "filename" : "Vector@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
