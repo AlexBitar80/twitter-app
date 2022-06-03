@@ -70,6 +70,12 @@ class LoginController: UIViewController {
         configureUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     //MARK: - Selectors
     
     @objc func handleLogin() {
@@ -77,14 +83,15 @@ class LoginController: UIViewController {
     }
     
     @objc func handleShowSignUp() {
-        print("Show sign up...")
+        let registrationController = RegistrationController()
+        
+        navigationController?.pushViewController(registrationController, animated: true)
     }
     
     //MARK: - Helpers
     
     private func configureUI() {
         view.backgroundColor = .blueTwitter
-        navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
         
         view.addSubview(logoImageView)
@@ -92,7 +99,8 @@ class LoginController: UIViewController {
         logoImageView.setDimensions(width: 70, height: 70)
         
         let stack = UIStackView(arrangedSubviews: [emailContainerView,
-                                                    passwordContainerView, loginButton])
+                                                   passwordContainerView,
+                                                   loginButton])
         
         stack.axis = .vertical
         stack.spacing = 20
