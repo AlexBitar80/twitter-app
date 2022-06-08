@@ -66,15 +66,11 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
         
         configureUI()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.navigationBar.isHidden = true
-    }
     
     //MARK: - Selectors
     
