@@ -80,6 +80,7 @@
 				05FA8C2D283A8BAD00CDDED3 /* Products */,
 				A8EA8830EC8018080438E117 /* Pods */,
 				E27E62B0E03DA69394B176F7 /* Frameworks */,
+				0587177B285C2B4C00086B9D /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +106,6 @@
 				05FA8C38283A8BB000CDDED3 /* Assets.xcassets */,
 				05A2D899285C370000240C6D /* GoogleService-Info.plist */,
 				05FA8C3A283A8BB000CDDED3 /* LaunchScreen.storyboard */,
-				0587177B285C2B4C00086B9D /* README.md */,
 				05FA8C3D283A8BB000CDDED3 /* Info.plist */,
 			);
 			path = "twitter-app-view-code";
