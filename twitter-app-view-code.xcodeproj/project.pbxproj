@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		052F929B285C2DDD005C3E50 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 052F929A285C2DDD005C3E50 /* GoogleService-Info.plist */; };
 		05358D20284679CD00852126 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05358D1F284679CD00852126 /* LoginController.swift */; };
 		05358D242846947200852126 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05358D232846947200852126 /* Utilities.swift */; };
 		05587D042848FA3800CF0B98 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05587D032848FA3800CF0B98 /* RegistrationController.swift */; };
 		0587177C285C2B4C00086B9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0587177B285C2B4C00086B9D /* README.md */; };
+		05A2D89A285C370000240C6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05A2D899285C370000240C6D /* GoogleService-Info.plist */; };
 		05EB1FF32841CF06001B77AD /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB1FF22841CF06001B77AD /* UIView+Extensions.swift */; };
 		05EB1FF52841CF78001B77AD /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB1FF42841CF78001B77AD /* UIColor+Extensions.swift */; };
 		05F979AD2857C15B00CDD0AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F979AC2857C15B00CDD0AA /* Constants.swift */; };
@@ -28,11 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		052F929A285C2DDD005C3E50 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05358D1F284679CD00852126 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		05358D232846947200852126 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		05587D032848FA3800CF0B98 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		0587177B285C2B4C00086B9D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		05A2D899285C370000240C6D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05EB1FF22841CF06001B77AD /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		05EB1FF42841CF78001B77AD /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		05F979AC2857C15B00CDD0AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 				05FA8C2F283A8BAD00CDDED3 /* AppDelegate.swift */,
 				05FA8C31283A8BAD00CDDED3 /* SceneDelegate.swift */,
 				05FA8C38283A8BB000CDDED3 /* Assets.xcassets */,
-				052F929A285C2DDD005C3E50 /* GoogleService-Info.plist */,
+				05A2D899285C370000240C6D /* GoogleService-Info.plist */,
 				05FA8C3A283A8BB000CDDED3 /* LaunchScreen.storyboard */,
 				0587177B285C2B4C00086B9D /* README.md */,
 				05FA8C3D283A8BB000CDDED3 /* Info.plist */,
@@ -241,7 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05FA8C3C283A8BB000CDDED3 /* LaunchScreen.storyboard in Resources */,
-				052F929B285C2DDD005C3E50 /* GoogleService-Info.plist in Resources */,
+				05A2D89A285C370000240C6D /* GoogleService-Info.plist in Resources */,
 				05FA8C39283A8BB000CDDED3 /* Assets.xcassets in Resources */,
 				0587177C285C2B4C00086B9D /* README.md in Resources */,
 			);
