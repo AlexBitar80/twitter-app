@@ -121,34 +121,15 @@ class RegistrationController: UIViewController {
         guard let fullname = fullnameTextField.text else { return }
         guard let username = usernameTextField.text else { return }
         
-        guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
-        let filename = NSUUID().uuidString
-        let storageRef = STORAGE_PROFILE_IMAGES.child(filename)
+        let credentials = AuthCredentials(email: email,
+                                              password: password,
+                                              fullname: fullname,
+                                              username: username,
+                                              profileImage: profileImage)
         
-        storageRef.putData(imageData, metadata: nil) { (meta, error) in
-            storageRef.downloadURL { (url, error) in
-                guard let profileImageUrl = url?.absoluteString else { return }
-                
-                Auth.auth().createUser(withEmail: email, password: password) { result, error in
-                    if let error = error {
-                        print("Error: \(error.localizedDescription)")
-                        return
-                    }
-                    
-                    guard let uid = result?.user.uid else { return }
-                    
-                    let values = [
-                        "email": email,
-                        "fullname": fullname,
-                        "username": username,
-                        "profileImageUrl": profileImageUrl
-                    ]
-                    
-                    REF_USERS.child(uid).updateChildValues(values) { (error, ref) in
-                        print("DEBUG: Successfully updated user information")
-                    }
-                }
-            }
+        AuthService.shared.registerUser(crendetials: credentials) { (error, ref) in
+            print("DEBUG: Sign up successful...")
+            print("DEBUG: Handle update user interface here...")
         }
     }
     
@@ -173,29 +154,29 @@ class RegistrationController: UIViewController {
         plusPhotoButton.setDimensions(width: 120, height: 120)
         
         let stack = UIStackView(arrangedSubviews: [emailContainerView,
-                                                   passwordContainerView,
-                                                   fullnameContainerView,
-                                                   usernameContainerView,
-                                                   registrationButton])
+                                                        passwordContainerView,
+                                                        fullnameContainerView,
+                                                        usernameContainerView,
+                                                        registrationButton])
         
         stack.axis = .vertical
         stack.spacing = 20
         
         view.addSubview(stack)
         stack.anchor(top: plusPhotoButton.bottomAnchor,
-                     left: view.leftAnchor,
-                     right: view.rightAnchor,
-                     paddingTop: 16,
-                     paddingLeft: 32,
-                     paddingRight: 32)
+                      left: view.leftAnchor,
+                      right: view.rightAnchor,
+                      paddingTop: 16,
+                      paddingLeft: 32,
+                      paddingRight: 32)
     
         view.addSubview(alreadyHaveAccountButton)
         alreadyHaveAccountButton.anchor(left: view.leftAnchor,
-                                        bottom: view.safeAreaLayoutGuide.bottomAnchor,
-                                        right: view.rightAnchor,
-                                        paddingLeft: 40,
-                                        paddingBottom: 8,
-                                        paddingRight: 40)
+                                              bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                                              right: view.rightAnchor,
+                                              paddingLeft: 40,
+                                              paddingBottom: 8,
+                                              paddingRight: 40)
     }
 }
 
