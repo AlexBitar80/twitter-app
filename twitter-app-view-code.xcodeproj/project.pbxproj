@@ -15,6 +15,7 @@
 		05A2D8A2285C4FA200240C6D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2D8A1285C4FA200240C6D /* AuthService.swift */; };
 		05EB1FF32841CF06001B77AD /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB1FF22841CF06001B77AD /* UIView+Extensions.swift */; };
 		05EB1FF52841CF78001B77AD /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB1FF42841CF78001B77AD /* UIColor+Extensions.swift */; };
+		05F15F58287338610011983D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F15F57287338610011983D /* UserService.swift */; };
 		05F979AD2857C15B00CDD0AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F979AC2857C15B00CDD0AA /* Constants.swift */; };
 		05FA8C30283A8BAD00CDDED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA8C2F283A8BAD00CDDED3 /* AppDelegate.swift */; };
 		05FA8C32283A8BAD00CDDED3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA8C31283A8BAD00CDDED3 /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 		05A2D8A1285C4FA200240C6D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		05EB1FF22841CF06001B77AD /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		05EB1FF42841CF78001B77AD /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		05F15F57287338610011983D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		05F979AC2857C15B00CDD0AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		05FA8C2C283A8BAD00CDDED3 /* twitter-app-view-code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "twitter-app-view-code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FA8C2F283A8BAD00CDDED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				05A2D8A1285C4FA200240C6D /* AuthService.swift */,
+				05F15F57287338610011983D /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				05FA8C4B283A8F3E00CDDED3 /* MainTabController.swift in Sources */,
 				05EB1FF52841CF78001B77AD /* UIColor+Extensions.swift in Sources */,
 				05FA8C4F283A8FC200CDDED3 /* ExploreController.swift in Sources */,
+				05F15F58287338610011983D /* UserService.swift in Sources */,
 				05587D042848FA3800CF0B98 /* RegistrationController.swift in Sources */,
 				05358D20284679CD00852126 /* LoginController.swift in Sources */,
 				05A2D8A2285C4FA200240C6D /* AuthService.swift in Sources */,
