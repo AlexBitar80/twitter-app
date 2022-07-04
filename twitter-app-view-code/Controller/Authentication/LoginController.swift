@@ -63,32 +63,36 @@ class LoginController: UIViewController {
         button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         return button
     }()
-    
-    
+
+
     //MARK: - Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
-        
+
         configureUI()
     }
-    
-    
+
+
     //MARK: - Selectors
-    
+
     @objc func handleLogin() {
-        guard let email = emailTextField.text else { return }
-        guard let password = passwordTextField.text else { return }
-        
-        AuthService.shared.logUserIn(withEmail: email, password: password) { result, error in
+		guard
+			let email = emailTextField.text,
+			let password = passwordTextField.text
+		else {
+			return
+		}
+
+        AuthService.shared.logUserIn(withEmail: email, password: password) { _, error in
             if let error = error {
                 print("DEBUG: Error logging in \(error.localizedDescription.lowercased())")
                 return
             }
-            
+
             guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
-            
+
             guard let tab = window.rootViewController as? MainTabController else { return }
             
             tab.authenticateUserAndConfigureUI()
@@ -108,24 +112,32 @@ class LoginController: UIViewController {
     private func configureUI() {
         view.backgroundColor = .blueTwitter
         navigationController?.navigationBar.barStyle = .black
-        
+
         view.addSubview(logoImageView)
         logoImageView.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         logoImageView.setDimensions(width: 70, height: 70)
-        
+
         let stack = UIStackView(arrangedSubviews: [emailContainerView,
-                                                   passwordContainerView,
-                                                   loginButton])
-        
+                                                        passwordContainerView,
+                                                        loginButton])
+
         stack.axis = .vertical
         stack.spacing = 20
-        
+
         view.addSubview(stack)
-        stack.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor,
-                     paddingTop: 32,paddingLeft: 32, paddingRight: 32)
-        
+        stack.anchor(top: logoImageView.bottomAnchor,
+                      left: view.leftAnchor,
+                      right: view.rightAnchor,
+                      paddingTop: 32,
+                      paddingLeft: 32,
+                      paddingRight: 32)
+
         view.addSubview(dontHaveAccountButton)
-        dontHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor,
-                                      paddingLeft: 40, paddingBottom: 8, paddingRight: 40)
+        dontHaveAccountButton.anchor(left: view.leftAnchor,
+                                          bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                                          right: view.rightAnchor,
+                                          paddingLeft: 40,
+                                          paddingBottom: 8,
+                                          paddingRight: 40)
     }
 }
