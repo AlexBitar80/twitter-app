@@ -8,21 +8,20 @@
 import UIKit
 
 class ExploreController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+
         configureUI()
     }
-    
+
     func configureUI() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        
+
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         navigationItem.title = "Explore"
-        
+
         view.backgroundColor = .white
     }
 }

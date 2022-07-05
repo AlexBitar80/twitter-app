@@ -8,21 +8,20 @@
 import UIKit
 
 class NotificationsController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configureUI()
     }
-    
+
     func configureUI() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        
+
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         navigationItem.title = "Notifications"
-        
+
         view.backgroundColor = .white
     }
 }
