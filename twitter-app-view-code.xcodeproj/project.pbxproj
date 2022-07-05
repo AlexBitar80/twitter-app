@@ -193,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05FA8C40283A8BB000CDDED3 /* Build configuration list for PBXNativeTarget "twitter-app-view-code" */;
 			buildPhases = (
+				05A8AFA62873B0E8006C23B6 /* ShellScript */,
 				5AAF8092C20B9067A1060BB9 /* [CP] Check Pods Manifest.lock */,
 				05FA8C28283A8BAD00CDDED3 /* Sources */,
 				05FA8C29283A8BAD00CDDED3 /* Frameworks */,
@@ -256,6 +257,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		05A8AFA62873B0E8006C23B6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		5AAF8092C20B9067A1060BB9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
