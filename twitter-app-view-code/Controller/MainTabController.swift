@@ -14,7 +14,7 @@ class MainTabController: UITabBarController {
     private lazy var actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor.blueTwitter
-        button.setImage(UIImage(systemName: "plus"), for: .normal)
+        button.setImage(UIImage(named: "plus"), for: .normal)
         button.tintColor = .white
         button.layer.cornerRadius = 56 / 2
         button.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
@@ -86,7 +86,7 @@ class MainTabController: UITabBarController {
     private func setConstraints() {
         actionButton.anchor(
 			bottom: view.safeAreaLayoutGuide.bottomAnchor,
-			right: view.rightAnchor,
+			right: view.safeAreaLayoutGuide.rightAnchor,
 			paddingBottom: 64,
 			paddingRight: 16,
 			width: 56,
@@ -102,26 +102,26 @@ class MainTabController: UITabBarController {
 
         let feedNav = ambedInNavigationController(
 			viewController: feed,
-			image: UIImage(systemName: "house"),
-			selectedImage: UIImage(systemName: "house.fill")
+			image: UIImage(named: "home-icon"),
+			selectedImage: UIImage(named: "home-icon-fill")
 		)
 
         let exploreNav = ambedInNavigationController(
 			viewController: explore,
-			image: UIImage(systemName: "magnifyingglass.circle"),
-			selectedImage: UIImage(systemName: "magnifyingglass.circle.fill")
+			image: UIImage(named: "search-icon"),
+			selectedImage: UIImage(named: "search-icon-fill")
 		)
 
         let notificationsNav = ambedInNavigationController(
 			viewController: notifications,
-			image: UIImage(systemName: "bell"),
-			selectedImage: UIImage(systemName: "bell.fill")
+			image: UIImage(named: "bell-icon"),
+			selectedImage: UIImage(named: "bell-icon-fill")
 		)
 
         let conversationsNav = ambedInNavigationController(
 			viewController: conversations,
-			image: UIImage(systemName: "envelope"),
-			selectedImage: UIImage(systemName: "envelope.fill")
+			image: UIImage(named: "message-icon"),
+			selectedImage: UIImage(named: "message-icon-fill")
 		)
 
         viewControllers = [feedNav, exploreNav, notificationsNav, conversationsNav]
