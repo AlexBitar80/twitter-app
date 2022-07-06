@@ -115,10 +115,14 @@ class RegistrationController: UIViewController {
             return
         }
 
-        guard let email = emailTextField.text else { return }
-        guard let password = passwordTextField.text else { return }
-        guard let fullname = fullnameTextField.text else { return }
-        guard let username = usernameTextField.text else { return }
+		guard
+			let email = emailTextField.text,
+			let password = passwordTextField.text,
+			let fullname = fullnameTextField.text,
+			let username = usernameTextField.text
+		else {
+			return
+		}
 
         let credentials = AuthCredentials(
 			email: email,
