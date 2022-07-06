@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Group 16@1x.png",
+      "filename" : "Bell Stroke Icon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Group 16@2x.png",
+      "filename" : "Bell Stroke Icon-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Group 16@3x.png",
+      "filename" : "Bell Stroke Icon-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

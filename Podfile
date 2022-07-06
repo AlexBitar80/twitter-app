@@ -12,5 +12,6 @@ target 'twitter-app-view-code' do
   pod 'FirebaseFirestore'
   pod 'FirebaseDatabase'
   pod 'FirebaseStorage'
+  pod 'SDWebImage', '~> 5.0'
 
 end
