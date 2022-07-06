@@ -6,15 +6,22 @@
 //
 
 import UIKit
+import SDWebImage
 
 class FeedController: UIViewController {
     // MARK: - Properties
 
+	var user: User? {
+		didSet {
+			configureLeftBarButton()
+		}
+	}
+
 	private lazy var profileImageView: UIImageView = {
 		let image = UIImageView()
-		image.backgroundColor = .blue
 		image.setDimensions(width: 30, height: 30)
 		image.layer.cornerRadius = 32 / 2
+		image.layer.masksToBounds = true
 		return image
 	}()
 
@@ -47,9 +54,16 @@ class FeedController: UIViewController {
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         navigationItem.titleView = imageLogo
-		navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
 		navigationItem.rightBarButtonItem = UIBarButtonItem(customView: highlightButton)
 
         view.backgroundColor = .white
     }
+
+	func configureLeftBarButton() {
+		guard let user = user else { return }
+
+		profileImageView.sd_setImage(with: user.profileImageUrl, completed: nil)
+
+		navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
+	}
 }

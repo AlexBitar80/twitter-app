@@ -204,8 +204,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05FA8C40283A8BB000CDDED3 /* Build configuration list for PBXNativeTarget "twitter-app-view-code" */;
 			buildPhases = (
-				05A8AFA62873B0E8006C23B6 /* ShellScript */,
 				5AAF8092C20B9067A1060BB9 /* [CP] Check Pods Manifest.lock */,
+				05A8AFA62873B0E8006C23B6 /* ShellScript */,
 				05FA8C28283A8BAD00CDDED3 /* Sources */,
 				05FA8C29283A8BAD00CDDED3 /* Frameworks */,
 				05FA8C2A283A8BAD00CDDED3 /* Resources */,
