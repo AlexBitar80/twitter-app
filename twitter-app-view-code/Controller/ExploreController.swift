@@ -15,10 +15,10 @@ class ExploreController: UIViewController {
     }
 
     func configureUI() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
+		let appearance = UINavigationBarAppearance()
+		appearance.configureWithOpaqueBackground()
 
-        navigationController?.navigationBar.tintColor = .white
+		navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         navigationItem.title = "Explore"
 

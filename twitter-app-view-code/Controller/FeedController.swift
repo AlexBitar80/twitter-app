@@ -48,11 +48,12 @@ class FeedController: UIViewController {
     // MARK: - Helpers
 
     func configureUI() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
+		let appearance = UINavigationBarAppearance()
+		appearance.configureWithOpaqueBackground()
 
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+		navigationController?.navigationBar.isTranslucent = false
+		navigationController?.navigationBar.scrollEdgeAppearance = appearance
+
         navigationItem.titleView = imageLogo
 		navigationItem.rightBarButtonItem = UIBarButtonItem(customView: highlightButton)
 
