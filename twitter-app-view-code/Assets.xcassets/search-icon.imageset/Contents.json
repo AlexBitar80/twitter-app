@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Search icon.png",
+      "filename" : "Search Stroke Icon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Search icon-1.png",
+      "filename" : "Search Stroke Icon-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Search icon-2.png",
+      "filename" : "Search Stroke Icon-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
