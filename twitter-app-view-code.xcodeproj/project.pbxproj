@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052C4F2D28792D98004754EE /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052C4F2C28792D98004754EE /* TweetService.swift */; };
 		05358D20284679CD00852126 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05358D1F284679CD00852126 /* LoginController.swift */; };
 		05358D242846947200852126 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05358D232846947200852126 /* Utilities.swift */; };
+		053F72AC2877315B00AD0073 /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053F72AB2877315B00AD0073 /* UploadTweetController.swift */; };
+		053F72AE28776AF000AD0073 /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053F72AD28776AF000AD0073 /* CaptionTextView.swift */; };
 		05587D042848FA3800CF0B98 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05587D032848FA3800CF0B98 /* RegistrationController.swift */; };
 		0587177C285C2B4C00086B9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0587177B285C2B4C00086B9D /* README.md */; };
 		0595D1E62874A425003D4689 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0595D1E52874A425003D4689 /* User.swift */; };
@@ -31,8 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		052C4F2C28792D98004754EE /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		05358D1F284679CD00852126 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		05358D232846947200852126 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		053F72AB2877315B00AD0073 /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
+		053F72AD28776AF000AD0073 /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		05587D032848FA3800CF0B98 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		0587177B285C2B4C00086B9D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0595D1E52874A425003D4689 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -98,6 +104,7 @@
 		05A2D89E285C4F7000240C6D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				053F72AD28776AF000AD0073 /* CaptionTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +122,7 @@
 			children = (
 				05A2D8A1285C4FA200240C6D /* AuthService.swift */,
 				05F15F57287338610011983D /* UserService.swift */,
+				052C4F2C28792D98004754EE /* TweetService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -165,6 +173,7 @@
 				05FA8C4E283A8FC200CDDED3 /* ExploreController.swift */,
 				05FA8C50283A8FD300CDDED3 /* NotificationsController.swift */,
 				05FA8C52283A8FF800CDDED3 /* ConversationsController.swift */,
+				053F72AB2877315B00AD0073 /* UploadTweetController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -332,10 +341,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				05FA8C30283A8BAD00CDDED3 /* AppDelegate.swift in Sources */,
+				052C4F2D28792D98004754EE /* TweetService.swift in Sources */,
 				05EB1FF32841CF06001B77AD /* UIView+Extensions.swift in Sources */,
 				05358D242846947200852126 /* Utilities.swift in Sources */,
 				05FA8C53283A8FF800CDDED3 /* ConversationsController.swift in Sources */,
+				053F72AC2877315B00AD0073 /* UploadTweetController.swift in Sources */,
 				0595D1E62874A425003D4689 /* User.swift in Sources */,
+				053F72AE28776AF000AD0073 /* CaptionTextView.swift in Sources */,
 				05FA8C32283A8BAD00CDDED3 /* SceneDelegate.swift in Sources */,
 				05FA8C4D283A8F9D00CDDED3 /* FeedController.swift in Sources */,
 				05FA8C51283A8FD300CDDED3 /* NotificationsController.swift in Sources */,

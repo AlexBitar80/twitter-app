@@ -161,8 +161,13 @@ class RegistrationController: UIViewController {
 
     private func configureUI() {
         view.backgroundColor = .blueTwitter
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.barStyle = .black
+
+		let appearance = UINavigationBarAppearance()
+		appearance.configureWithOpaqueBackground()
+
+
+		navigationController?.navigationBar.isTranslucent = false
+		navigationController?.navigationBar.scrollEdgeAppearance = appearance
 
         view.addSubview(plusPhotoButton)
 

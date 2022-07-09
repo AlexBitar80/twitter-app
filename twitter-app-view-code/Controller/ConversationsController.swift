@@ -15,11 +15,12 @@ class ConversationsController: UIViewController {
     }
 
     func configureUI() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
+		let appearance = UINavigationBarAppearance()
+		appearance.configureWithOpaqueBackground()
 
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+		navigationController?.navigationBar.isTranslucent = false
+		navigationController?.navigationBar.scrollEdgeAppearance = appearance
+
         navigationItem.title = "Conversations"
 
         view.backgroundColor = .white

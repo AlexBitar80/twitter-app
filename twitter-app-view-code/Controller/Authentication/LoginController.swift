@@ -19,7 +19,10 @@ class LoginController: UIViewController {
     }()
 
     private lazy var emailContainerView: UIView = {
-        let image = UIImage(systemName: "envelope")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        let image = UIImage(systemName: "envelope")?.withTintColor(
+			.white,
+			renderingMode: .alwaysOriginal
+		)
         let view = Utilities().inputContainerView(
 			withImage: image,
 			textField: emailTextField
@@ -28,7 +31,10 @@ class LoginController: UIViewController {
     }()
 
     private lazy var passwordContainerView: UIView = {
-        let image = UIImage(systemName: "lock")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        let image = UIImage(systemName: "lock")?.withTintColor(
+			.white,
+			renderingMode: .alwaysOriginal
+		)
         let view = Utilities().inputContainerView(
 			withImage: image,
 			textField: passwordTextField
@@ -64,7 +70,10 @@ class LoginController: UIViewController {
     }()
 
     private lazy var dontHaveAccountButton: UIButton = {
-        let button = Utilities().attributedButton("Don't have an account?", " Sign Up")
+        let button = Utilities().attributedButton(
+			"Don't have an account?",
+			" Sign Up"
+		)
         button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         return button
     }()
