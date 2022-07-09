@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		052C4F2D28792D98004754EE /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052C4F2C28792D98004754EE /* TweetService.swift */; };
+		052C4F2F28794289004754EE /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052C4F2E28794289004754EE /* Tweet.swift */; };
+		052C4F3128795078004754EE /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052C4F3028795078004754EE /* TweetCell.swift */; };
 		05358D20284679CD00852126 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05358D1F284679CD00852126 /* LoginController.swift */; };
 		05358D242846947200852126 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05358D232846947200852126 /* Utilities.swift */; };
 		053F72AC2877315B00AD0073 /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053F72AB2877315B00AD0073 /* UploadTweetController.swift */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		052C4F2C28792D98004754EE /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
+		052C4F2E28794289004754EE /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		052C4F3028795078004754EE /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		05358D1F284679CD00852126 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		05358D232846947200852126 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		053F72AB2877315B00AD0073 /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				053F72AD28776AF000AD0073 /* CaptionTextView.swift */,
+				052C4F3028795078004754EE /* TweetCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				0595D1E52874A425003D4689 /* User.swift */,
+				052C4F2E28794289004754EE /* Tweet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,9 +357,11 @@
 				05FA8C32283A8BAD00CDDED3 /* SceneDelegate.swift in Sources */,
 				05FA8C4D283A8F9D00CDDED3 /* FeedController.swift in Sources */,
 				05FA8C51283A8FD300CDDED3 /* NotificationsController.swift in Sources */,
+				052C4F2F28794289004754EE /* Tweet.swift in Sources */,
 				05F979AD2857C15B00CDD0AA /* Constants.swift in Sources */,
 				05FA8C4B283A8F3E00CDDED3 /* MainTabController.swift in Sources */,
 				05EB1FF52841CF78001B77AD /* UIColor+Extensions.swift in Sources */,
+				052C4F3128795078004754EE /* TweetCell.swift in Sources */,
 				05FA8C4F283A8FC200CDDED3 /* ExploreController.swift in Sources */,
 				05F15F58287338610011983D /* UserService.swift in Sources */,
 				05587D042848FA3800CF0B98 /* RegistrationController.swift in Sources */,
