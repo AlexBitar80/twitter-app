@@ -17,6 +17,12 @@ class FeedController: UICollectionViewController {
 		}
 	}
 
+	private var tweets: [Tweet] = [] {
+		didSet {
+			collectionView.reloadData()
+		}
+	}
+
 	private lazy var profileImageView: UIImageView = {
 		let image = UIImageView()
 		image.setDimensions(width: 30, height: 30)
@@ -42,6 +48,8 @@ class FeedController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		collectionView.showsHorizontalScrollIndicator = false
+
         configureUI()
 		fetchTweets()
     }
@@ -50,7 +58,7 @@ class FeedController: UICollectionViewController {
 
 	func fetchTweets() {
 		TweetService.shared.fetchTweets { tweets in
-			print("DEBUG: tweets \(tweets)")
+			self.tweets = tweets
 		}
 	}
 
@@ -69,8 +77,6 @@ class FeedController: UICollectionViewController {
 
         navigationItem.titleView = imageLogo
 		navigationItem.rightBarButtonItem = UIBarButtonItem(customView: highlightButton)
-
-        view.backgroundColor = .white
     }
 
 	func configureLeftBarButton() {
@@ -84,7 +90,7 @@ class FeedController: UICollectionViewController {
 
 extension FeedController {
 	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 20
+		return tweets.count
 	}
 
 	override func collectionView(
@@ -97,6 +103,8 @@ extension FeedController {
 		) as? TweetCell else {
 			return TweetCell()
 		}
+
+		cell.tweet = tweets[indexPath.row]
 
 		return cell
 	}
