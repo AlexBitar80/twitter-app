@@ -13,6 +13,12 @@ class TweetCell: UICollectionViewCell {
 
 	static let reuseIdentifier = "tweetCell"
 
+	var tweet: Tweet? {
+		didSet {
+			configure()
+		}
+	}
+
 	private lazy var profileImageView: UIImageView = {
 		let imageView = UIImageView()
 		imageView.setDimensions(width: 48, height: 48)
@@ -79,7 +85,6 @@ class TweetCell: UICollectionViewCell {
 		super.init(frame: frame)
 
 		backgroundColor = .white
-
 		addSubview(profileImageView)
 		profileImageView.anchor(
 			top: topAnchor,
@@ -97,8 +102,8 @@ class TweetCell: UICollectionViewCell {
 			top: profileImageView.topAnchor,
 			left: profileImageView.rightAnchor,
 			right: safeAreaLayoutGuide.rightAnchor,
-			paddingLeft: 12,
-			paddingRight: 24
+			paddingLeft: 8,
+			paddingRight: 12
 		)
 
 		let actionStack = UIStackView(
@@ -155,4 +160,14 @@ class TweetCell: UICollectionViewCell {
 	}
 
 	// MARK: - Helpers
+
+	func configure() {
+		guard let tweet = tweet else { return }
+
+		let viewModel = TweetViewModel(tweet: tweet)
+
+		infoLabel.attributedText = viewModel.userInfoText
+		captionLabel.text = tweet.caption
+		profileImageView.sd_setImage(with: viewModel.profileImageUrl)
+	}
 }
