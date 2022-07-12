@@ -119,7 +119,7 @@ class RegistrationController: UIViewController {
 			let email = emailTextField.text,
 			let password = passwordTextField.text,
 			let fullname = fullnameTextField.text,
-			let username = usernameTextField.text
+			let username = usernameTextField.text?.lowercased()
 		else {
 			return
 		}
