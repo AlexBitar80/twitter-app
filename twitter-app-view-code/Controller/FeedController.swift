@@ -54,6 +54,19 @@ class FeedController: UICollectionViewController {
 		fetchTweets()
     }
 
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		navigationController?.navigationBar.isHidden = false
+	}
+
+	override func viewWillTransition(
+		to size: CGSize,
+		with coordinator: UIViewControllerTransitionCoordinator
+	) {
+		super.viewWillTransition(to: size, with: coordinator)
+		collectionView?.collectionViewLayout.invalidateLayout()
+	}
+
 	// MARK: - API
 
 	func fetchTweets() {
@@ -68,7 +81,11 @@ class FeedController: UICollectionViewController {
 		let appearance = UINavigationBarAppearance()
 		appearance.configureWithOpaqueBackground()
 
-		collectionView.register(TweetCell.self, forCellWithReuseIdentifier: TweetCell.reuseIdentifier)
+		collectionView.showsVerticalScrollIndicator = false
+		collectionView.register(
+			TweetCell.self,
+			forCellWithReuseIdentifier: TweetCell.reuseIdentifier
+		)
 		collectionView.backgroundColor = .white
 
 		navigationController?.navigationBar.isTranslucent = false
@@ -76,7 +93,9 @@ class FeedController: UICollectionViewController {
 		navigationController?.navigationBar.scrollEdgeAppearance = appearance
 
         navigationItem.titleView = imageLogo
-		navigationItem.rightBarButtonItem = UIBarButtonItem(customView: highlightButton)
+		navigationItem.rightBarButtonItem = UIBarButtonItem(
+			customView: highlightButton
+		)
     }
 
 	func configureLeftBarButton() {
@@ -84,12 +103,19 @@ class FeedController: UICollectionViewController {
 
 		profileImageView.sd_setImage(with: user.profileImageUrl, completed: nil)
 
-		navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
+		navigationItem.leftBarButtonItem = UIBarButtonItem(
+			customView: profileImageView
+		)
 	}
 }
 
+// MARK: - CollectionViewDataSource
+
 extension FeedController {
-	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+	override func collectionView(
+		_ collectionView: UICollectionView,
+		numberOfItemsInSection section: Int
+	) -> Int {
 		return tweets.count
 	}
 
@@ -104,11 +130,14 @@ extension FeedController {
 			return TweetCell()
 		}
 
+		cell.delegate = self
 		cell.tweet = tweets[indexPath.row]
 
 		return cell
 	}
 }
+
+// MARK: - UICollectionViewDelegateFlowLayout
 
 extension FeedController: UICollectionViewDelegateFlowLayout {
 	func collectionView(
@@ -116,6 +145,17 @@ extension FeedController: UICollectionViewDelegateFlowLayout {
 		layout collectionViewLayout: UICollectionViewLayout,
 		sizeForItemAt indexPath: IndexPath
 	) -> CGSize {
-		return CGSize(width: view.frame.width, height: 100)
+		return CGSize(width: view.frame.width, height: 120)
+	}
+}
+
+// MARK: - TweetCellDelegate
+
+extension FeedController: TweetCellDelegate {
+	func handleProfileImageTapped(_ cell: TweetCell) {
+		guard let user = cell.tweet?.user else { return }
+
+		let controller = ProfileController(user: user)
+		navigationController?.pushViewController(controller, animated: true)
 	}
 }

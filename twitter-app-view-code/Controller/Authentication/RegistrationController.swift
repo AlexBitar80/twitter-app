@@ -16,8 +16,12 @@ class RegistrationController: UIViewController {
     private var profileImage: UIImage?
 
     private lazy var plusPhotoButton: UIButton = {
+		var configuration = UIButton.Configuration.plain()
+		configuration.image = UIImage(systemName: "photo.circle")
+
         let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "add-photo-profile"), for: .normal)
+		button.configuration = configuration
+		button.imageView?.setDimensions(width: 120, height: 120)
         button.tintColor = .white
         button.addTarget(self, action: #selector(handleAddPhotoProfile), for: .touchUpInside)
         return button
@@ -129,7 +133,8 @@ class RegistrationController: UIViewController {
 			password: password,
 			fullname: fullname,
 			username: username,
-			profileImage: profileImage)
+			profileImage: profileImage
+		)
 
         AuthService.shared.registerUser(crendetials: credentials) { _, _ in
 			let scenes = UIApplication.shared.connectedScenes
