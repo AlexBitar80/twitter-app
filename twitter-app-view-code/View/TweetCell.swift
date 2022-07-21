@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol TweetCellDelegate: AnyObject {
+	func handleProfileImageTapped(_ cell: TweetCell)
+}
+
 class TweetCell: UICollectionViewCell {
 	// MARK: - Properties
 
@@ -19,12 +23,18 @@ class TweetCell: UICollectionViewCell {
 		}
 	}
 
+	weak var delegate: TweetCellDelegate?
+
 	private lazy var profileImageView: UIImageView = {
 		let imageView = UIImageView()
 		imageView.setDimensions(width: 48, height: 48)
 		imageView.layer.masksToBounds = true
 		imageView.backgroundColor = .blueTwitter
 		imageView.layer.cornerRadius = 48 / 2
+
+		let tap = UITapGestureRecognizer(target: self, action: #selector(handleProfileImageTapped))
+		imageView.addGestureRecognizer(tap)
+		imageView.isUserInteractionEnabled = true
 		return imageView
 	}()
 
@@ -37,6 +47,7 @@ class TweetCell: UICollectionViewCell {
 
 	private lazy var captionLabel: UILabel = {
 		let label = UILabel()
+		label.adjustsFontSizeToFitWidth = true
 		label.numberOfLines = 0
 		label.text = "Olá, este é meu primeiro tweet dá rede! :D"
 		label.font = UIFont.systemFont(ofSize: 14)
@@ -103,7 +114,7 @@ class TweetCell: UICollectionViewCell {
 			left: profileImageView.rightAnchor,
 			right: safeAreaLayoutGuide.rightAnchor,
 			paddingLeft: 8,
-			paddingRight: 12
+			paddingRight: 20
 		)
 
 		let actionStack = UIStackView(
@@ -123,7 +134,7 @@ class TweetCell: UICollectionViewCell {
 			right: safeAreaLayoutGuide.rightAnchor,
 			paddingLeft: 12,
 			paddingBottom: 12,
-			paddingRight: 24
+			paddingRight: 48
 		)
 
 		let underlineView = UIView()
@@ -142,6 +153,11 @@ class TweetCell: UICollectionViewCell {
 	}
 
 	// MARK: - Selectors
+
+	@objc func handleProfileImageTapped() {
+	//	print("DEBUG: Handle profile image tapped in cell")
+		delegate?.handleProfileImageTapped(self)
+	}
 
 	@objc func handleCommentTapped() {
 		print("1")
