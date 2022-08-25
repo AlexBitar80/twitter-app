@@ -195,6 +195,7 @@ class ProfileHeader: UICollectionReusableView {
 		addSubview(followStack)
 	}
 
+    // swiftlint:disable function_body_length
 	private func setConstraints() {
 		containerView.anchor(
 			top: topAnchor,
@@ -247,7 +248,6 @@ class ProfileHeader: UICollectionReusableView {
 		followStack.spacing = 8
 		followStack.distribution = .fillEqually
 		followStack.axis = .horizontal
-
 
 		followStack.anchor(
 			top: userDetailStack.bottomAnchor,

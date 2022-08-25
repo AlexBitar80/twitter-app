@@ -170,7 +170,6 @@ class RegistrationController: UIViewController {
 		let appearance = UINavigationBarAppearance()
 		appearance.configureWithOpaqueBackground()
 
-
 		navigationController?.navigationBar.isTranslucent = false
 		navigationController?.navigationBar.scrollEdgeAppearance = appearance
 

@@ -92,6 +92,7 @@ class TweetCell: UICollectionViewCell {
 
 	// MARK: - Lifecycle
 
+    // swiftlint:disable function_body_length
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 

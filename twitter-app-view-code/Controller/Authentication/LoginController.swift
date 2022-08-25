@@ -78,7 +78,6 @@ class LoginController: UIViewController {
         return button
     }()
 
-
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
