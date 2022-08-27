@@ -38,7 +38,7 @@
 		05FA8C51283A8FD300CDDED3 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA8C50283A8FD300CDDED3 /* NotificationsController.swift */; };
 		05FA8C53283A8FF800CDDED3 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA8C52283A8FF800CDDED3 /* ConversationsController.swift */; };
 		6A99E69372CF84D0C9062D54 /* Pods_twitter_app_view_code.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BEAC26BAD8CDE2A8F1C0F9 /* Pods_twitter_app_view_code.framework */; };
-		CE22835528B8027B00E318F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE22835428B8027B00E318F9 /* GoogleService-Info.plist */; };
+		CEBE06A228BA800A0063BC08 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEBE06A128BA800A0063BC08 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,7 +76,7 @@
 		05FA8C52283A8FF800CDDED3 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		3D48D899D7E2E1EBFF4C0AB4 /* Pods-twitter-app-view-code.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter-app-view-code.release.xcconfig"; path = "Target Support Files/Pods-twitter-app-view-code/Pods-twitter-app-view-code.release.xcconfig"; sourceTree = "<group>"; };
 		99BEAC26BAD8CDE2A8F1C0F9 /* Pods_twitter_app_view_code.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twitter_app_view_code.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE22835428B8027B00E318F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEBE06A128BA800A0063BC08 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FEED76B461EA505FB865DA24 /* Pods-twitter-app-view-code.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter-app-view-code.debug.xcconfig"; path = "Target Support Files/Pods-twitter-app-view-code/Pods-twitter-app-view-code.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,7 +181,7 @@
 				0595D1E72874A5C5003D4689 /* Application */,
 				05FA8C38283A8BB000CDDED3 /* Assets.xcassets */,
 				05FA8C3A283A8BB000CDDED3 /* LaunchScreen.storyboard */,
-				CE22835428B8027B00E318F9 /* GoogleService-Info.plist */,
+				CEBE06A128BA800A0063BC08 /* GoogleService-Info.plist */,
 				05FA8C3D283A8BB000CDDED3 /* Info.plist */,
 			);
 			path = "twitter-app-view-code";
@@ -292,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05FA8C3C283A8BB000CDDED3 /* LaunchScreen.storyboard in Resources */,
-				CE22835528B8027B00E318F9 /* GoogleService-Info.plist in Resources */,
+				CEBE06A228BA800A0063BC08 /* GoogleService-Info.plist in Resources */,
 				05FA8C39283A8BB000CDDED3 /* Assets.xcassets in Resources */,
 				0587177C285C2B4C00086B9D /* README.md in Resources */,
 			);

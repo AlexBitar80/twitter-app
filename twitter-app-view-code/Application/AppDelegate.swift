@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseCore
 
+// swiftlint:disable line_length
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(
