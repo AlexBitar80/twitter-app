@@ -23,7 +23,7 @@ struct AuthService {
     func logUserIn(
 		withEmail email: String,
 		password: String,
-		completion: AuthDataResultCallback?
+		completion: @escaping (AuthDataResult?, Error?) -> Void
 	) {
         Auth.auth().signIn(withEmail: email, password: password, completion: completion)
     }
